@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon Relics</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- MAIN MENU (div-based SPA) -->
+    <div id="menu" class="screen active">
+      <div class="logo">NEON <span>RELICS</span></div>
+      <div class="menu-buttons">
+        <button id="startBtn">▶ Start Run</button>
+        <button id="charactersBtn">🧑 Characters</button>
+        <button id="settingsBtn">⚙️ Settings</button>
+        <button id="codexBtn">📜 Codex</button>
+        <button id="quitBtn">❌ Quit</button>
+      </div>
+      <div class="footer">v0.1 — MVP</div>
+    </div>
+
+    <!-- CHARACTER SELECT -->
+    <div id="characterSelect" class="screen">
+      <h2>Select Character</h2>
+      <div id="characterCards" class="cards"></div>
+      <button id="backFromCharacters">← Back</button>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" class="screen">
+      <h2>Settings</h2>
+      <div id="settingsContent"></div>
+      <button id="backFromSettings">← Back</button>
+    </div>
+
+    <!-- GAME CANVAS -->
+    <div id="gameScreen" class="screen">
+      <canvas id="gameCanvas" width="1280" height="720"></canvas>
+      <div id="hud">
+        <div id="health">Health: <span id="hpVal">100</span></div>
+        <div id="energy">Energy: <span id="enVal">50</span></div>
+      </div>
+      <button id="exitToMenu">Exit To Menu</button>
+    </div>
+
+    <!-- CODex / other screens can be added similarly -->
+  </div>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
